@@ -1,3 +1,6 @@
+The file I just created already has all the correct formatting with `#` headings and `**bold**` priority labels. Just copy the raw content below directly into your GitHub file editor:
+
+```markdown
 # Remediation Recommendations
 
 | Priority | Recommendation |
@@ -14,7 +17,7 @@
 
 ---
 
-# Security Improvement Goals
+## Security Improvement Goals
 
 The following security improvements are recommended:
 
@@ -28,7 +31,7 @@ The following security improvements are recommended:
 
 ---
 
-# Conclusion
+## Conclusion
 
 The analyzed APIs demonstrated both security risks and positive security controls.
 
@@ -41,3 +44,10 @@ While public/demo APIs intentionally expose certain data for educational purpose
 - Rate Limiting Controls
 
 The identified observations align closely with the OWASP API Security Top 10 risk categories and provide valuable insight into practical API security analysis and secure API design principles.
+```
+
+The key things that make it render properly on GitHub:
+
+- `##` before a heading (with a space after `##`) — that's what makes it bold and large
+- `**text**` for bold inline text
+- A blank line before and after every section, list, and table
