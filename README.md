@@ -1,101 +1,133 @@
-API Security Risk Analysis
+# API Security Risk Analysis Report
 
-Future Interns — Cyber Security Internship Task 03
+> **Future Interns — Cyber Security Internship 2026**
+> Task 03 | Read-Only Ethical API Testing | May 2026
 
-This project focuses on performing a read-only API Security Risk Analysis on public APIs to identify common API security risks, security controls, and potential exposure issues.
+---
 
-The assessment was conducted using publicly available demo APIs in a safe and ethical manner without exploitation or unauthorized activities.
+## Overview
 
+This repository contains a professional **API Security Risk Analysis** conducted as part of the Future Interns Cyber Security Internship 2026 program. The assessment evaluates two publicly available demo APIs using ethical, read-only testing methodologies and maps findings to the **OWASP API Security Top 10**.
 
-Objective
+---
 
-The objective of this project was to:
+## Author
 
-Analyze public API endpoints
-Identify common API security risks
-Inspect authentication and authorization behavior
-Review API response structures and headers
-Identify excessive data exposure
-Understand API security best practices
-Create professional cybersecurity documentation
+| Field | Details |
+|---|---|
+| **Name** | Safal Kumar Singh |
+| **Domain** | Cyber Security |
+| **Task** | Task 03 – API Security Risk Analysis |
+| **Organization** | Future Interns |
+| **Report Version** | 1.0 Final |
+| **Date** | May 2026 |
 
-APIs Tested
+---
 
-JSONPlaceholder API
-https://jsonplaceholder.typicode.com
-ReqRes API
-https://reqres.in
+## Objectives
 
-Tools & Technologies Used
+- Analyze public APIs safely for common security risks
+- Inspect authentication behavior and response data exposure
+- Review HTTP security headers and rate limiting controls
+- Map findings to OWASP API Security Top 10
+- Produce professional cybersecurity documentation
 
-Postman
-Browser DevTools
-JSONPlaceholder
-ReqRes
-VS Code
-GitHub
-Bash Scripting
-macOS Terminal
+---
 
-Project Structure
+## APIs Tested
 
-Assets/
-Findings/
-Raw-Analysis/
-Report/
-scripts/
+| API | URL | Purpose |
+|---|---|---|
+| **JSONPlaceholder** | https://jsonplaceholder.typicode.com | Public fake REST API for testing |
+| **ReqRes** | https://reqres.in | Demo REST API platform |
 
+---
 
-Key Security Areas Analyzed
+## Tools & Technologies
 
-Missing Authentication
-Excessive Data Exposure
-IDOR-style Risks
-Security Header Analysis
-API Response Structure
-Rate Limiting Controls
-Public API Accessibility
-OWASP API Security Top 10 Mapping
+| Tool | Purpose |
+|---|---|
+| Postman | API Testing & Response Inspection |
+| Browser DevTools | Header Inspection |
+| VS Code | Script & Documentation Editing |
+| Bash Scripting | Automated API Analysis |
+| GitHub | Project Hosting |
+| macOS Terminal | Script Execution |
 
-Findings Summary
+---
 
-The assessment identified multiple API security observations including:
+## Key Findings
 
-Publicly accessible API endpoints
-Exposure of user-related information
-Sequential object identifiers
-Presence of rate limiting controls
-Implementation of basic security headers
-Structured JSON response handling
-The project also identified positive security controls such as HTTPS communication and controlled API response behavior.
+| Severity | Finding | OWASP Category |
+|---|---|---|
+| **High** | Missing Authentication Controls | API2 – Broken Authentication |
+| **High** | Excessive Data Exposure | API3 – Broken Object Property Level Authorization |
+| **Medium** | Sequential Identifier / IDOR Risk | API1 – Broken Object Level Authorization |
+| **Low** | Missing Advanced Security Headers | API8 – Security Misconfiguration |
+| **Info** | Rate Limiting Mechanisms Detected | API4 – Unrestricted Resource Consumption |
 
+---
 
-Security Controls Observed
+## Positive Security Controls Identified
 
-HTTPS Enabled
-Rate Limiting Mechanisms
-Security Headers
-Structured API Responses
-Controlled Public Responses
+- HTTPS communication enforced on all endpoints
+- Rate limiting headers present (`x-ratelimit-limit`, `x-ratelimit-remaining`)
+- Structured and consistent JSON responses
+- Security headers implemented on ReqRes (`Strict-Transport-Security`, `X-Frame-Options`)
+- No internal server information exposed in responses
 
-Scripts Included
+---
 
-The repository contains a Bash automation script:
+## Testing Methodology
 
-api_security_analysis.sh
+```
+Phase 1 → API Discovery
+Phase 2 → Authentication Testing
+Phase 3 → Response Analysis
+Phase 4 → Sequential Identifier Testing
+Phase 5 → Header Inspection
+Phase 6 → Rate Limiting Review
+```
 
-The script automates API requests and stores analysis outputs inside the raw analysis file.
+---
 
+## Remediation Recommendations
 
-Disclaimer
+| Priority | Recommendation |
+|---|---|
+| High | Implement authentication and authorization mechanisms |
+| High | Reduce unnecessary exposure of sensitive user fields |
+| Medium | Replace sequential IDs with UUIDs to mitigate IDOR risks |
+| Medium | Apply field-level authorization validation |
+| Medium | Maintain and strengthen rate limiting protections |
+| Medium | Add `Content-Security-Policy` and other hardening headers |
 
-All APIs used in this project are publicly available educational/demo APIs intended for testing and learning purposes only.
+---
 
-No exploitation, bypass attempts, or malicious activities were performed during this project.
+## Repository Structure
 
+```
+ api-security-risk-analysis/
+├──  README.md
+├──  API_Security_Risk_Analysis_Report.docx
+└──  scripts/
+    └──  api_analysis.sh
+```
 
-Author
+---
 
-Cyber Security Internship Project
-Future Interns — Task 03
-API Security Risk Analysis
+## Disclaimer
+
+> This project was conducted **strictly for educational and internship purposes** as part of the Future Interns Cyber Security Internship 2026 program.
+>
+> All APIs tested are publicly available demo/testing APIs intended for learning. **No exploitation, bypass attempts, unauthorized access, or malicious activities were performed.**
+
+---
+
+## License
+
+This project is for educational use only. All findings are based on publicly accessible APIs.
+
+---
+
+<p align="center">Made with  by Safal Kumar Singh | Future Interns Cyber Security 2026</p>
