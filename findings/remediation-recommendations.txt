@@ -1,53 +1,50 @@
-The file I just created already has all the correct formatting with `#` headings and `**bold**` priority labels. Just copy the raw content below directly into your GitHub file editor:
+=====================================
+  REMEDIATION RECOMMENDATIONS
+=====================================
 
-```markdown
-# Remediation Recommendations
+PRIORITY    RECOMMENDATION
+--------    --------------
+HIGH        Implement authentication and authorization controls for sensitive API endpoints
+HIGH        Minimize unnecessary exposure of user-related information in API responses
+HIGH        Avoid exposing personally identifiable information (PII) publicly unless required
+MEDIUM      Replace predictable sequential identifiers with UUIDs or randomized object identifiers
+MEDIUM      Apply field-level access control and response filtering mechanisms
+MEDIUM      Continue enforcing rate limiting protections against automated abuse
+MEDIUM      Maintain and strengthen HTTP security header configurations
+LOW         Regularly review API responses for unnecessary data exposure
+LOW         Perform periodic API security assessments and monitoring
 
-| Priority | Recommendation |
-|----------|----------------|
-| **HIGH** | Implement authentication and authorization controls for sensitive API endpoints |
-| **HIGH** | Minimize unnecessary exposure of user-related information in API responses |
-| **HIGH** | Avoid exposing personally identifiable information (PII) publicly unless required |
-| **MEDIUM** | Replace predictable sequential identifiers with UUIDs or randomized object identifiers |
-| **MEDIUM** | Apply field-level access control and response filtering mechanisms |
-| **MEDIUM** | Continue enforcing rate limiting protections against automated abuse |
-| **MEDIUM** | Maintain and strengthen HTTP security header configurations |
-| **LOW** | Regularly review API responses for unnecessary data exposure |
-| **LOW** | Perform periodic API security assessments and monitoring |
 
----
-
-## Security Improvement Goals
+=====================================
+  SECURITY IMPROVEMENT GOALS
+=====================================
 
 The following security improvements are recommended:
 
-- Reduce excessive data exposure
-- Improve authentication enforcement
-- Strengthen access control mechanisms
-- Prevent automated API abuse
-- Maintain secure API response handling
-- Continue implementing modern security headers
-- Improve API hardening practices
+  - Reduce excessive data exposure
+  - Improve authentication enforcement
+  - Strengthen access control mechanisms
+  - Prevent automated API abuse
+  - Maintain secure API response handling
+  - Continue implementing modern security headers
+  - Improve API hardening practices
 
----
 
-## Conclusion
+=====================================
+  CONCLUSION
+=====================================
 
 The analyzed APIs demonstrated both security risks and positive security controls.
 
-While public/demo APIs intentionally expose certain data for educational purposes, the assessment highlighted important API security concepts including:
+While public/demo APIs intentionally expose certain data for educational purposes,
+the assessment highlighted important API security concepts including:
 
-- Missing Authentication
-- Excessive Data Exposure
-- Sequential Identifier Enumeration
-- Security Header Protection
-- Rate Limiting Controls
+  - Missing Authentication
+  - Excessive Data Exposure
+  - Sequential Identifier Enumeration
+  - Security Header Protection
+  - Rate Limiting Controls
 
-The identified observations align closely with the OWASP API Security Top 10 risk categories and provide valuable insight into practical API security analysis and secure API design principles.
-```
-
-The key things that make it render properly on GitHub:
-
-- `##` before a heading (with a space after `##`) — that's what makes it bold and large
-- `**text**` for bold inline text
-- A blank line before and after every section, list, and table
+The identified observations align closely with the OWASP API Security Top 10 risk
+categories and provide valuable insight into practical API security analysis and
+secure API design principles.
