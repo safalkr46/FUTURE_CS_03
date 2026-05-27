@@ -4,15 +4,15 @@
 
 | Priority | Recommendation |
 |----------|----------------|
-| 🔴 HIGH | Implement authentication and authorization controls for sensitive API endpoints |
-| 🔴 HIGH | Minimize unnecessary exposure of user-related information in API responses |
-| 🔴 HIGH | Avoid exposing personally identifiable information (PII) publicly unless required |
-| 🟡 MEDIUM | Replace predictable sequential identifiers with UUIDs or randomized object identifiers |
-| 🟡 MEDIUM | Apply field-level access control and response filtering mechanisms |
-| 🟡 MEDIUM | Continue enforcing rate limiting protections against automated abuse |
-| 🟡 MEDIUM | Maintain and strengthen HTTP security header configurations |
-| 🟢 LOW | Regularly review API responses for unnecessary data exposure |
-| 🟢 LOW | Perform periodic API security assessments and monitoring |
+| HIGH | Implement authentication and authorization controls for sensitive API endpoints |
+| HIGH | Minimize unnecessary exposure of user-related information in API responses |
+| HIGH | Avoid exposing personally identifiable information (PII) publicly unless required |
+| MEDIUM | Replace predictable sequential identifiers with UUIDs or randomized object identifiers |
+| MEDIUM | Apply field-level access control and response filtering mechanisms |
+| MEDIUM | Continue enforcing rate limiting protections against automated abuse |
+| MEDIUM | Maintain and strengthen HTTP security header configurations |
+| LOW | Regularly review API responses for unnecessary data exposure |
+| LOW | Perform periodic API security assessments and monitoring |
 
 ---
 
