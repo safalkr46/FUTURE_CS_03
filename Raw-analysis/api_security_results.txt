@@ -1,0 +1,221 @@
+==========================================
+ FUTURE INTERNS - TASK 03
+ API SECURITY RISK ANALYSIS
+==========================================
+
+
+==========================================
+[1] Missing Authentication Analysis
+==========================================
+
+API Endpoint Tested:
+https://jsonplaceholder.typicode.com/users
+
+Observation:
+The API endpoint allowed direct access to user information without requiring authentication or authorization verification.
+
+Security Concern:
+Unauthenticated access to API resources may increase the risk of data scraping and information disclosure.
+
+Risk Level:
+Medium
+
+Response Output:
+(Paste JSONPlaceholder /users response here)
+
+
+
+==========================================
+[2] Excessive Data Exposure Analysis
+==========================================
+
+API Endpoint Tested:
+https://jsonplaceholder.typicode.com/users/1
+
+Observation:
+The API response exposed multiple user-related fields including:
+- Full Name
+- Email Address
+- Phone Number
+- Address Information
+- Website Details
+- Company Information
+
+Security Concern:
+Excessive exposure of user information may assist attackers during reconnaissance and social engineering attacks.
+
+Risk Level:
+Medium
+
+Response Output:
+(Paste /users/1 response here)
+
+
+
+==========================================
+[3] IDOR (Insecure Direct Object Reference) Analysis
+==========================================
+
+API Endpoints Tested:
+https://jsonplaceholder.typicode.com/users/1
+https://jsonplaceholder.typicode.com/users/2
+
+Observation:
+Specific user records could be accessed directly by modifying numerical identifiers within the API endpoint.
+
+Example:
+- /users/1
+- /users/2
+- /users/3
+
+Security Concern:
+Predictable object identifiers may increase the risk of unauthorized access if proper authorization checks are not implemented.
+
+Risk Level:
+Medium
+
+Response Output:
+(Paste /users/2 response here)
+
+
+
+==========================================
+[4] Security Headers Analysis
+==========================================
+
+Observation:
+HTTP response headers were analyzed to identify implemented security controls and API response handling.
+
+Headers Observed:
+- Content-Type
+- Cache-Control
+- ETag
+- X-Content-Type-Options
+
+Positive Security Controls:
+- HTTPS communication enabled
+- Secure content-type handling
+- Structured API responses observed
+
+Security Concern:
+Some advanced security headers such as Content-Security-Policy were not visibly implemented.
+
+Risk Level:
+Low
+
+
+
+==========================================
+[5] Rate Limiting Analysis
+==========================================
+
+Observation:
+Rate limiting headers were identified during API response inspection.
+
+Headers Identified:
+- x-ratelimit-limit
+- x-ratelimit-remaining
+- x-ratelimit-reset
+
+Positive Security Observation:
+The API appears to implement request limiting mechanisms to reduce abuse and excessive automated traffic.
+
+Security Benefit:
+Rate limiting helps mitigate:
+- Automated scraping
+- API abuse
+- Brute-force style attacks
+
+Risk Level:
+Low
+
+
+
+==========================================
+[6] API Response Structure Analysis
+==========================================
+
+Observation:
+The API returned properly structured JSON responses with organized fields and consistent formatting.
+
+Positive Findings:
+- Consistent response formatting
+- Proper JSON structure
+- Stable endpoint responses
+- Predictable API behavior
+
+Security Observation:
+Well-structured API responses improve maintainability and reduce parsing-related security issues.
+
+Risk Level:
+Low
+
+
+
+==========================================
+[7] Public API Response Analysis
+==========================================
+
+API Endpoint Tested:
+https://reqres.in/api/users
+
+Observation:
+The API endpoint successfully returned user-related information through a public GET request.
+
+Data Observed:
+- User IDs
+- Email Addresses
+- First Names
+- Last Names
+- Avatar URLs
+
+Security Observation:
+The API provided structured and controlled public responses without exposing sensitive internal system information.
+
+Positive Security Controls:
+- Proper JSON formatting
+- Organized API response structure
+- HTTPS enabled communication
+
+Risk Level:
+Low
+
+Response Output:
+(Paste ReqRes response here)
+
+
+
+==========================================
+[8] API Header Security Analysis
+==========================================
+
+Observation:
+HTTP response headers were analyzed to identify implemented security controls and server configurations.
+
+Headers Identified:
+- x-content-type-options
+- x-ratelimit-limit
+- x-ratelimit-remaining
+- cache-control
+- content-type
+
+Positive Security Controls:
+- HTTPS communication enabled
+- Rate limiting headers implemented
+- Content type protection enabled
+- Structured API responses observed
+
+Security Concern:
+Some advanced API hardening headers such as Content-Security-Policy were not visibly implemented.
+
+Risk Level:
+Low
+
+Header Response:
+(Paste ReqRes header output here)
+
+
+
+==========================================
+ API SECURITY ANALYSIS COMPLETED
+==========================================
